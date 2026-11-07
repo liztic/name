@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сільськогосподарська техніка | GreenAgro</title>
+    <style>
+        /* ПОВНЕ КОПІЮВАННЯ СТИЛІВ З ТВОЄЇ ГОЛОВНОЇ СТОРІНКИ */
+        html {
+            scroll-behavior: smooth;
+        }
+        html, body{
+            width: 750px;
+            height: 100%;
+            margin: 0;
+            margin-left: 125px;
+            background: url(281.jpg);
+            font-size: 16px;
+            background-attachment:fixed;
+        }
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        :selection {
+            background: rgba(83, 95, 108, 0.3); 
+            color: #000;
+        }
+        .glob{
+            width: 770px;
+            background: rgb(219, 214, 254);
+            text-align: center;
+            border: 2px solid black;
+            box-sizing: border-box;
+            padding-bottom: 20px;
+        }
+        .container{
+            padding: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .menu{
+            list-style: none;
+            padding: 0;
+            margin: 0; 
+            margin-left: 180px;
+            float: right;
+        }
+        .menu>li{
+            float: left;
+            margin: 10px;
+            display: inline-block;
+            font-size: 1rem;
+        }
+        .menu a{
+            text-decoration: none;
+        }
+        .menu li a{
+            transition-timing-function: ease-in-out;
+            transition-duration: 0.3s;
+            color: grey;
+        }
+        .menu>li:hover>a{
+            background: rgba(210, 210, 210, 1.0);
+            border-radius: 8px;
+            padding: 4px 10px;
+            color: black;
+        }
+        .menu li a:active {
+            transform: scale(0.95);
+            display: inline-block;
+        }
+        .photo{
+            height: 55px;
+            width: 55px;
+        }
+
+        /* ДОДАТКОВІ СТИЛІ СІТКИ ДЛЯ СТОРІНКИ КАТАЛОГУ */
+        .catalog-title {
+            text-align: center; color: black; font-weight: bold; font-size: 23px;
+            margin-top: 30px; margin-bottom: 20px; border-bottom: 2px dashed rgb(0, 4, 79); padding-bottom: 10px;
+        }
+        .catalog-layout { display: flex; gap: 15px; padding: 0 15px; }
+        
+        .filter-sidebar {
+            width: 200px; background: white; border: 2px solid rgb(0, 4, 79);
+            border-radius: 6px; padding: 15px; box-sizing: border-box; text-align: left; height: fit-content;
+        }
+        .filter-sidebar h3 { margin-top: 15px; font-size: 14px; color: rgb(0, 4, 79); border-bottom: 1px solid #ccc; padding-bottom: 5px; font-weight: bold; }
+        .filter-sidebar h3:first-child { margin-top: 0; }
+        .filter-group label { display: block; font-size: 12px; margin-bottom: 8px; cursor: pointer; color: black; }
+        .filter-group input { margin-right: 6px; vertical-align: middle; }
+
+        .products-content { flex: 1; }
+        .product-card {
+            background: white; border: 2px solid rgb(0, 4, 79); border-radius: 6px;
+            padding: 10px; margin-bottom: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: 0.2s;
+        }
+        .product-card:hover { transform: scale(1.01); }
+        .product-img {
+            width: 120px; height: 90px; border-radius: 4px; float: left;
+            border: 1px solid #ccc; background: #eef2f5; display: flex;
+            align-items: center; justify-content: center; font-size: 11px; color: #555; font-weight: bold;
+            text-align: center; padding: 5px; box-sizing: border-box;
+        }
+        .product-info { margin-left: 135px; text-align: left; }
+        .product-name { font-size: 15px; font-weight: bold; color: black; margin: 0 0 4px 0; }
+        .product-desc { font-size: 12px; color: #333; margin: 0 0 8px 0; line-height: 1.4; }
+        .product-meta { font-size: 11px; color: #666; margin-bottom: 5px; font-style: italic; }
+        .product-price { font-size: 14px; font-weight: bold; color: #4CAF50; }
+
+        footer {
+            width: 100%; background-color: #222831; color: #adbac7; margin-top: 40px;
+            padding: 30px 20px 20px 20px; box-sizing: border-box; border-radius: 0 0 6px 6px;
+        }
+        .footer-pay-btn {
+            display: inline-block; background-color: #4CAF50; color: white; padding: 8px 25px;
+            border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 14px; box-shadow: 0 4px 10px rgba(76, 175, 80, 0.2);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="glob">
+        <!-- ТВОЯ ОРИГІНАЛЬНА ШАПКА ТА МЕНЮ (З ДОДАВАННЯМ ОСОБИСТОГО КАБІНЕТУ) -->
+        <div class="clearfix" style="padding: 10px 15px; text-align: left;">
+            <div class="photo" style="background: #4CAF50; border-radius: 50%; float:left;"></div> 
+            <ul class="menu">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="about.html">Про нас</a></li>
+                <li><a href="catalog-seeds.html">Насіння</a></li>
+                <li><a href="cabinet.html">Кабінет</a></li>
+                <li><a href="payment.html">Оплата</a></li>
+            </ul>
+        </div>
+        <div class="catalog-title">🚜 Сільськогосподарська техніка</div>
+        <div class="catalog-layout">
+            <!-- БІЧНИЙ ФІЛЬТР ДЛЯ ТЕХНІКИ -->
+            <div class="filter-sidebar">
+                <h3>Тип техніки</h3>
+                <div class="filter-group">
+                    <label><input type="checkbox" class="filter-type" value="tractor" checked> Трактори</label>
+                    <label><input type="checkbox" class="filter-type" value="seeder" checked> Сівалки / Борони</label>
+                    <label><input type="checkbox" class="filter-type" value="harvester" checked> Комбайни</label>
+                </div>
+                <h3>Виробник</h3>
+                <div class="filter-group">
+                    <label><input type="checkbox" class="filter-brand" value="ua" checked> Україна</label>
+                    <label><input type="checkbox" class="filter-brand" value="eu" checked> ЄС (Німеччина)</label>
+                    <label><input type="checkbox" class="filter-brand" value="us" checked> США</label>
+                </div>
+                <h3>Стан</h3>
+                <div class="filter-group">
+                    <label><input type="checkbox" class="filter-status" value="new" checked> Нова техніка</label>
+                    <label><input type="checkbox" class="filter-status" value="used" checked> Б/В макети</label>
+                </div>
+            </div>
+
+            <!-- СПИСОК ТОВАРІВ (8 ВЕЛИКИХ ПОЗИЦІЙ) -->
+            <div class="products-content">
+                <div class="product-card clearfix" data-type="tractor" data-brand="ua" data-status="new">
+                    <div class="product-img">Трактор ХТЗ</div>
+                    <div class="product-info">
+                        <div class="product-name">Колісний трактор ХТЗ-243К.20</div>
+                        <div class="product-meta">Виробник: Україна | Стан: Новий</div>
+                        <div class="product-desc">Потужність 250 к.с., модернізована КПП. Ідеально підходить для глибокої оранки полів.</div>
+                        <div class="product-price">Ціна: за запитом</div>
+                    </div>
+                </div>
+
+                <div class="product-card clearfix" data-type="seeder" data-brand="ua" data-status="new">
+                    <div class="product-img">Сівалка СЗ</div>
+                    <div class="product-info">
+                        <div class="product-name">Зернотукова сівалка СЗ-5.4</div>
+                        <div class="product-meta">Виробник: Україна | Стан: Новий</div>
+                        <div class="product-desc">Для точного висіву зернових та бобових культур з одночасним внесенням сухих мінеральних добрив.</div>
+                        <div class="product-price">Ціна: за запитом</div>
+                    </div>
+                </div>
+
+                <div class="product-card clearfix" data-type="harvester" data-brand="eu" data-status="used">
+                    <div class="product-img">CLAAS Lexion</div>
+                    <div class="product-info">
+                        <div class="product-name">Комбайн CLAAS Lexion 670 (2018)</div>
+                        <div class="product-meta">Виробник: ЄС | Стан: Б/В</div>
+                        <div class="product-desc">Напрацювання 1200 мотогодин. Автоматичний контроль обмолоту, зернова жниварка 7.5м.</div>
+                        <div class="product-price">Ціна: за запитом</div>
+                    </div>
+                </div>
+
+                <div class="product-card clearfix" data-type="tractor" data-brand="us" data-status="new">
+                    <div class="product-img">John Deere</div>
+                    <div class="product-info">
+                        <div class="product-name">Трактор John Deere 8R 340</div>
+                        <div class="product-meta">Виробник: США | Стан: Новий</div>
+                        <div class="product-desc">Преміум-трактор потужністю 340 к.с. Інтегрована супутникова навігація AutoTrac для автоматичного керування по GPS.</div>
+                        <div class="product-price">Ціна: за запитом</div>
+                    </div>
+                </div>
+
+                <div class="product-card clearfix" data-type="seeder" data-brand="eu" data-status="new">
+                    <div class="product-img">Борона Lemken</div>
+                    <div class="product-info">
+                        <div class="product-name">Дискова борона Lemken Rubin 10</div>
+                        <div class="product-meta">Виробник: ЄС | Стан: Новий</div>
+                        <div class="product-desc">Забезпечує інтенсивне та якісне перемішування рослинних залишків та ґрунту на важких ділянках.</div>
+                        <div class="product-price">Ціна: за запитом</div>
+                    </div>
+                </div>
+
+                <div class="product-card clearfix" data-type="tractor" data-brand="ua" data-status="new">
+                    <div class="product-img">Міні-трактор</div>
+                    <div class="product-info">
+                        <div class="product-name">Міні-трактор колісний Скаут T-25</div>
+                        <div class="product-meta">Виробник: Україна | Стан: Новий</div>
+                        <div class="product-desc">Компактна колісна модель для невеликих приватних ферм, садівництва та роботи в теплицях.</div>
+                        <div class="product-price">Ціна: за запитом</div>
+                    </div>
+                </div>
+
+                <div class="product-card clearfix" data-type="harvester" data-brand="us" data-status="used">
+                    <div class="product-img">Case IH 8240</div>
+                    <div class="product-info">
+                        <div class="product-name">Роторний комбайн Case IH Axial-Flow</div>
+                        <div class="product-meta">Виробник: США | Стан: Б/В</div>
+                        <div class="product-desc">Ефективна американська роторна технологія обмолоту. Делікатний збір врожаю зерна та кукурудзи.</div>
+                        <div class="product-price">Ціна: за запитом</div>
+                    </div>
+                </div>
+
+                <div class="product-card clearfix" data-type="seeder" data-brand="us" data-status="new">
+                    <div class="product-img">Great Plains</div>
+                    <div class="product-info">
+                        <div class="product-name">Механічна зернова сівалка 3S</div>
+                        <div class="product-meta">Виробник: США | Стан: Новий</div>
+                        <div class="product-desc">Трисекційна сівалка преміум-якості для посіву за мінімальною технологією обробітку землі.</div>
+                        <div class="product-price">Ціна: за запитом</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-action-block" style="text-align: center; margin-bottom: 15px;">
+                <a href="index.html" class="footer-pay-btn">← На головну</a>
+            </div>
+            <div style="font-size: 11px; color: #768390; border-top: 1px solid #373e47; padding-top: 10px;">
+                © 2026 GreenAgro. Розділ Сільгосптехніка. Курсовий проект.
+            </div>
+        </footer>
+    </div>
+</div>
+
+<script>
+const typeBoxes = document.querySelectorAll('.filter-type');
+const brandBoxes = document.querySelectorAll('.filter-brand');
+const statusBoxes = document.querySelectorAll('.filter-status');
+const cards = document.querySelectorAll('.product-card');
+
+function filterProducts() {
+    cards.forEach(card => {
+        const cardType = card.getAttribute('data-type');
+        const cardBrand = card.getAttribute('data-brand');
+        const cardStatus = card.getAttribute('data-status');
+
+        const typeChecked = document.querySelector(`.filter-type[value="${cardType}"]`).checked;
+        const brandChecked = document.querySelector(`.filter-brand[value="${cardBrand}"]`).checked;
+        const statusChecked = document.querySelector(`.filter-status[value="${cardStatus}"]`).checked;
+
+        if (typeChecked && brandChecked && statusChecked) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+[...typeBoxes, ...brandBoxes, ...statusBoxes].forEach(box => {
+    box.addEventListener('change', filterProducts);
+});
+</script>
+</body>
+</html>

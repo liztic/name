@@ -1,0 +1,255 @@
+html {
+  scroll-behavior: smooth;
+}
+html, body{
+	width: 750px;
+	height: 100%;
+	margin: 0;
+	margin-left: 125px;
+	background: url(281.jpg);
+	font-size: 16px;
+	background-attachment:fixed;
+}
+.clearfix:aftre{
+	content: "";
+	display: table;
+	clear: both;
+}
+:selection {
+  background: rgba(83, 95, 108, 0.3); 
+  color: #000;
+}
+.glob{
+	width: 770px;
+	background: rgb(219, 214, 254);
+	text-align: center;
+	border: 2px solid black;
+}
+.container{
+	padding: 1px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+	position: relative;
+}
+.menu{
+	list-style: none;
+	padding: 0;
+	margin: 0; 
+	margin-left: 340px;
+	float: right;
+}
+.menu>li{
+	float: left;
+	margin: 10px;
+}
+.clearfix::aftre{
+	content: "";
+	display: table;
+	clear: both;
+}
+.menu a{
+	text-decoration: none;
+}
+.menu>li{
+	display: inline-block;
+	font-size: 1rem;
+}
+.menu li a{
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.3s;
+	color: grey;
+}
+.menu>li:hover>a{
+	background: rgba(210, 210, 210, 1.0);
+	border-radius: 8px;
+	padding: 4px 10px;
+	color: black;
+}
+.menu li a:active {
+  transform: scale(0.95);
+  display: inline-block;
+}
+.photo{
+	weight: 55px;
+	width: 55px;
+}
+.cn{
+	position: absolute;
+	left: 260px;
+	top: 40px;
+}
+.ph1{
+	width: 200px;
+	margin-left: 37.5px;
+	float: left;
+	border: 2px solid black;
+	margin-top: 100px;
+  border-radius: 5px;
+}
+.ph2{
+	width: 200px;
+	margin-left: 37.5px;
+	float: left;
+	border: 2px solid black;
+	margin-top: 130px;
+  border-radius: 5px;
+}
+.ph3{
+	width: 200px;
+	margin-left: 37.5px;
+	float: left;
+	border: 2px solid black;
+	margin-top: 117px;
+  border-radius: 5px;
+}
+.ph1, .ph2, .ph3 {
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+.ph1:hover, .ph2:hover, .ph3:hover {
+  filter: blur(2px);    
+  opacity: 0.6;         
+  cursor: pointer;      
+}
+.op{
+	width: 180px;
+	float: left;
+	margin-left: 57.5px;
+	margin-top: 5px;
+}
+.dt {
+  display: inline-block;
+  width: 110px;
+  margin-right: 20px;
+  margin-top: 15px;
+}
+footer {
+  width: 100%;
+  background-color: #222831;
+  color: #adbac7;
+  /* Добавляем внешний отступ СВЕРХУ, чтобы контент и кнопка оплаты не наезжали */
+  margin-top: 60px; 
+  /* Внутренние отступы: 50px сверху/снизу, 20px по бокам */
+  padding: 50px 20px 30px 20px; 
+  font-family: 'Inter', 'Roboto', sans-serif;
+  box-sizing: border-box;
+  position: relative; /* Нужно для позиционирования кнопки "Наверх" */
+}
+
+.footer-container {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-logo {
+  color: #4CAF50;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* Новая аккуратная кнопка перехода к оплате */
+.footer-action-block {
+  margin-bottom: 35px;
+}
+
+.footer-pay-btn {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.2);
+}
+
+.footer-pay-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+/* Сетка для информации (как в реальных магазинах) */
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin-bottom: 35px;
+  gap: 20px;
+}
+
+.footer-col {
+  flex: 1;
+}
+
+.footer-col h4 {
+  color: white;
+  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: 600;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+.footer-col a {
+  display: block;
+  color: #adbac7;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 8px;
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: #4CAF50;
+}
+
+.footer-col p {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #adbac7;
+}
+
+/* Копирайт */
+.footer-copyright {
+  font-size: 12px;
+  color: #768390;
+  border-top: 1px solid #373e47;
+  padding-top: 20px;
+}
+
+/* Кнопка "Наверх" в углу футера */
+.scroll-to-top {
+  position: absolute;
+  top: -25px; /* Выносим её немного наверх над линией футера */
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+.a{
+	position: absolute;
+	left: 130px;
+}
