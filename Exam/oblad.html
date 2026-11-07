@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запчастини та обладнання | GreenAgro</title>
+    <style>
+        /* ПОВНЕ КОПІЮВАННЯ СТИЛІВ З ТВОЄЇ ГОЛОВНОЇ СТОРІНКИ */
+        html {
+            scroll-behavior: smooth;
+        }
+        html, body{
+            width: 750px;
+            height: 100%;
+            margin: 0;
+            margin-left: 125px;
+            background: url(281.jpg);
+            font-size: 16px;
+            background-attachment:fixed;
+        }
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        :selection {
+            background: rgba(83, 95, 108, 0.3); 
+            color: #000;
+        }
+        .glob{
+            width: 770px;
+            background: rgb(219, 214, 254);
+            text-align: center;
+            border: 2px solid black;
+            box-sizing: border-box;
+            padding-bottom: 20px;
+        }
+        .container{
+            padding: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .menu{
+            list-style: none;
+            padding: 0;
+            margin: 0; 
+            margin-left: 180px;
+            float: right;
+        }
+        .menu>li{
+            float: left;
+            margin: 10px;
+            display: inline-block;
+            font-size: 1rem;
+        }
+        .menu a{
+            text-decoration: none;
+        }
+        .menu li a{
+            transition-timing-function: ease-in-out;
+            transition-duration: 0.3s;
+            color: grey;
+        }
+        .menu>li:hover>a{
+            background: rgba(210, 210, 210, 1.0);
+            border-radius: 8px;
+            padding: 4px 10px;
+            color: black;
+        }
+        .menu li a:active {
+            transform: scale(0.95);
+            display: inline-block;
+        }
+        .photo{
+            height: 55px;
+            width: 55px;
+        }
+
+        /* ДОДАТКОВІ СТИЛІ СІТКИ ДЛЯ СТОРІНКИ КАТАЛОГУ */
+        .catalog-title {
+            text-align: center; color: black; font-weight: bold; font-size: 23px;
+            margin-top: 30px; margin-bottom: 20px; border-bottom: 2px dashed rgb(0, 4, 79); padding-bottom: 10px;
+        }
+        .catalog-layout { display: flex; gap: 15px; padding: 0 15px; }
+        
+        .filter-sidebar {
+            width: 200px; background: white; border: 2px solid rgb(0, 4, 79);
+            border-radius: 6px; padding: 15px; box-sizing: border-box; text-align: left; height: fit-content;
+        }
+        .filter-sidebar h3 { margin-top: 15px; font-size: 14px; color: rgb(0, 4, 79); border-bottom: 1px solid #ccc; padding-bottom: 5px; font-weight: bold; }
+        .filter-sidebar h3:first-child { margin-top: 0; }
+        .filter-group label { display: block; font-size: 12px; margin-bottom: 8px; cursor: pointer; color: black; }
+        .filter-group input { margin-right: 6px; vertical-align: middle; }
+
+        .products-content { flex: 1; }
+        .product-card {
+            background: white; border: 2px solid rgb(0, 4, 79); border-radius: 6px;
+            padding: 10px; margin-bottom: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: 0.2s;
+        }
+        .product-card:hover { transform: scale(1.01); }
+        .product-img {
+            width: 120px; height: 90px; border-radius: 4px; float: left;
+            border: 1px solid #ccc; background: #eef2f5; display: flex;
+            align-items: center; justify-content: center; font-size: 11px; color: #555; font-weight: bold;
+            text-align: center; padding: 5px; box-sizing: border-box;
+        }
+        .product-info { margin-left: 135px; text-align: left; }
+        .product-name { font-size: 15px; font-weight: bold; color: black; margin: 0 0 4px 0; }
+        .product-desc { font-size: 12px; color: #333; margin: 0 0 8px 0; line-height: 1.4; }
+        .product-meta { font-size: 11px; color: #666; margin-bottom: 5px; font-style: italic; }
+        .product-price { font-size: 14px; font-weight: bold; color: #4CAF50; }
+
+        footer {
+            width: 100%; background-color: #222831; color: #adbac7; margin-top: 40px;
+            padding: 30px 20px 20px 20px; box-sizing: border-box; border-radius: 0 0 6px 6px;
+        }
+        .footer-pay-btn {
+            display: inline-block; background-color: #4CAF50; color: white; padding: 8px 25px;
+            border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 14px; box-shadow: 0 4px 10px rgba(76, 175, 80, 0.2);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="glob">
+        <!-- МЕНЮ З ПОСИЛАННЯМ НА ПЕРШУ СТОРІНКУ ТЕХНІКИ -->
+        <div class="clearfix" style="padding: 10px 15px; text-align: left;">
+            <div class="photo" style="background: #4CAF50; border-radius: 50%; float:left;"></div> 
+            <ul class="menu">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="about.html">Про нас</a></li>
+                <li><a href="catalog-tech.html">Техніка</a></li>
+                <li><a href="cabinet.html">Кабінет</a></li>
+                <li><a href="payment.html">Оплата</a></li>
+            </ul>
+        </div>
+        <div class="catalog-title">⚙️ Запчастини та обладнання</div>
+        <div class="catalog-layout">
+            <!-- БІЧНИЙ ФІЛЬТР ДЛЯ ЗАПЧАСТИН -->
+            <div class="filter-sidebar">
+                <h3>Технічний вузол</h3>
+                <div class="filter-group">
+                    <label><input type="checkbox" class="filter-node" value="hydraulics" checked> Гідравліка</label>
+                    <label><input type="checkbox" class="filter-node" value="chassis" checked> Ходова частина</label>
+                    <label><input type="checkbox" class="filter-node" value="working" checked> Неробочі органи(</label>
+                </div>
+                <h3>Сумісність</h3>
+                <div class="filter-group">
+                    <label><input type="checkbox" class="filter-brand" value="domestic" checked> МТЗ / ХТЗ / ЮМЗ</label>
+                    <label><input type="checkbox" class="filter-brand" value="import" checked> John Deere / CLAAS</label>
+                </div>
+            </div>
+
+            <!-- СПИСОК ТОВАРІВ (8 ВЕЛИКИХ ТЕХНІЧНИХ ПОЗИЦІЙ) -->
+            <div class="products-content">
+                <div class="product-card clearfix" data-node="working" data-brand="domestic">
+                    <div class="product-img">Диск Борони</div>
+                    <div class="product-info">
+                        <div class="product-name">Диск борони «Ромашка» 560мм посилений</div>
+                        <div class="product-meta">Вузол: Робочі органи | Сумісність: ХТЗ / БДТ</div>
+                        <div class="product-desc">Виготовлений із загартованої борвмісної сталі 65Г. Має підвищений ресурс при роботі на сухому та важкому ґрунті.</div>
+                        <div class="product-price">Ціна: 850 грн</div>
+                    </div>
+                </div>
+
+                <div class="product-card clearfix" data-node="hydraulics" data-brand="domestic">
+                    <div class="product-img">Насос НШ-32</div>
+                    <div class="product-info">
+                        <div class="product-name">Шестеренний гідронасос НШ-32М-3 (круглий)</div>
+                        <div class="product-meta">Вузол: Гідравліка | Сумісність: МТЗ / ЮМЗ</div>
+                        <div class="product-desc">Призначений нагнітання робочої рідини в гідросистему тракторів навісного обладнання. Оригінал.</div>
+                        <div class="product-price">Ціна: 1450 грн</div>
+                    </div>
+                </div>
+
+                <div class="product-card clearfix" data-node="chassis" data-brand="import">
+                    <div class="product-img">Гусениця трактора</div>
+                    <div class="product-info">
+                        <div class="product-name">Резинова гусениця Camso 24 дюйми</div>
+                        <div class="product-meta">Вузол: Ходова | Сумісність: John Deere 8RT</div>
+                        <div class="product-desc">Професійні гусеничні стрічки преміум-класу для зменшення тиску трактора на ґрунт.</div>
+                        <div class="product-price">Ціна: за запитом</div>
+                    </div>
+                </div>
+
+                <div class="product-card clearfix" data-node="working" data-brand="domestic">
+                    <div class="product-img">Лемеш Плуга</div>
+                    <div class="product-info">
+                        <div class="product-name">Лемеш плуга ПЛН 3-35 з наплавкою</div>
+                        <div class="product-meta">Вузол: Робочі органи | Сумісність: Плуги ПЛН</div>
+                        <div class="product-desc">Посилений лемеш самозаточувальний із сормайтовою наплавкою для традиційних відвальних плугів.</div>
+                        <div class="product-price">Ціна: 620 грн</div>
+                    </div>
+                </div>
+
+                <div class="product-card clearfix" data-node="hydraulics" data-brand="import">
+                    <div class="product-img">Гідроциліндр</div>
+                    <div class="product-info">
+                        <div class="product-name">Гідроциліндр підйому жниварки CLAAS</div>
+                        <div class="product-meta">Вузол: Гідравліка | Сумісність: CLAAS Lexion</div>
+                        <div class="product-desc">Оригінальний поршневий гідроциліндр високого тиску з комплектом німецьких фторопластових ущільнювачів.</div>
+                        <div class="product-price">Ціна: за запитом</div>
+                    </div>
+                </div>
+
+                <div class="product-card clearfix" data-node="chassis" data-brand="domestic">
+                    <div class="product-img">Каток опорний</div>
+                    <div class="product-info">
+                        <div class="product-name">Каток опорний трактора Т-150 грейферний</div>
+                        <div class="product-meta">Вузол: Ходова | Сумісність: ХТЗ</div>
+                        <div class="product-desc">Зібраний каток з віссю та підшипниками в чавунному литому корпусі підвищеної міцності.</div>
+                        <div class="product-price">Ціна: 3100 грн</div>
+                    </div>
+                </div>
+
+                <div class="product-card clearfix" data-node="working" data-brand="import">
+                    <div class="product-img">Лапа культиватора</div>
+                    <div class="product-info">
+                        <div class="product-name">Стрільчата лапа культиватора John Deere</div>
+                        <div class="product-meta">Вузол: Робочі органи | Сумісність: John Deere</div>
+                        <div class="product-desc">Ширина обробітку 250мм. Стійка до стирання геометрія крил забезпечує стабільне підрізання бур'янів.</div>
+                        <div class="product-price">Ціна: 380 грн</div>
+                    </div>
+                </div>
+
+                <div class="product-card clearfix" data-node="hydraulics" data-brand="domestic">
+                    <div class="product-img">РВД Шланг</div>
+                    <div class="product-info">
+                        <div class="product-name">Рукав високого тиску РВД (двошаровий) 1.5м</div>
+                        <div class="product-meta">Вузол: Гідравліка | Сумісність: Універсальний</div>
+                        <div class="product-desc">Шланг з металевим обплетенням під штуцер М20х1.5 для з'єднання виносних гідроциліндрів навіски.</div>
+                        <div class="product-price">Ціна: 240 грн</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-action-block" style="text-align: center; margin-bottom: 15px;">
+                <a href="index.html" class="footer-pay-btn">← На головну</a>
+            </div>
+            <div style="font-size: 11px; color: #768390; border-top: 1px solid #373e47; padding-top: 10px;">
+                © 2026 GreenAgro. Розділ Запчастини та Обладнання. Курсовий проект.
+            </div>
+        </footer>
+    </div>
+</div>
+
+<script>
+const nodeBoxes = document.querySelectorAll('.filter-node');
+const brandBoxes = document.querySelectorAll('.filter-brand');
+const cards = document.querySelectorAll('.product-card');
+
+function filterProducts() {
+    cards.forEach(card => {
+        const cardNode = card.getAttribute('data-node');
+        const cardBrand = card.getAttribute('data-brand');
+
+        const nodeChecked = document.querySelector(`.filter-node[value="${cardNode}"]`).checked;
+        const brandChecked = document.querySelector(`.filter-brand[value="${cardBrand}"]`).checked;
+
+        if (nodeChecked && brandChecked) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+[...nodeBoxes, ...brandBoxes].forEach(box => {
+    box.addEventListener('change', filterProducts);
+});
+</script>
+</body>
+</html>

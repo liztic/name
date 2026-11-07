@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>GreenAgro — Особистий Кабінет</title>
+
+  <link rel="stylesheet" href="style.css"> 
+  <style>
+    .menu{
+      list-style: none;
+      padding: 0;
+      margin: 0; 
+      margin-left: 350px;
+      float: right;
+    }
+    .menu>li{
+      float: left;
+      margin: 10px;
+    }
+    .clearfix::aftre{
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .menu a{
+      text-decoration: none;
+    }
+    .menu>li{
+      display: inline-block;
+      font-size: 1rem;
+    }
+    .menu li a{
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.3s;
+      color: grey;
+    }
+    .menu>li:hover>a{
+      background: rgba(210, 210, 210, 1.0);
+      border-radius: 8px;
+      padding: 4px 10px;
+      color: black;
+    }
+    .menu li a:active {
+      transform: scale(0.95);
+      display: inline-block;
+    }
+      .cabinet-box {
+      background: white;
+      border: 2px solid #38404a;
+      border-radius: 15px;
+      width: 400px;
+      margin: 50px auto;
+      padding: 30px;
+      text-align: left;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+      font-family: sans-serif;
+    }
+    .cabinet-box h2 {
+      text-align: center;
+      color: #38404a;
+      margin-top: 0;
+    }
+    .info-group {
+      margin-bottom: 20px;
+    }
+    .info-group label {
+      font-weight: bold;
+      display: block;
+      color: #555;
+      margin-bottom: 5px;
+    }
+    .info-value {
+      font-size: 1.1rem;
+      padding: 8px;
+      background: #f3f3f3;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      word-break: break-all;
+    }
+    .password-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-toggle {
+      padding: 8px 12px;
+      background: #535f6c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+    .btn-toggle:hover {
+      background: #38404a;
+    }
+    .btn-logout {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #d32f2f;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: bold;
+      margin-top: 25px;
+      transition: background 0.2s;
+    }
+    .btn-logout:hover {
+      background-color: #b71c1c;
+    }
+        footer {
+  width: 100% !important;
+  background-color: #222831 !important;
+  color: #adbac7 !important;
+  margin-top: 60px !important; 
+  padding: 50px 20px 30px 20px !important; 
+  font-family: 'Inter', 'Roboto', sans-serif !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+}
+
+.footer-container {
+  max-width: 750px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.footer-logo {
+  color: #4CAF50 !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  margin-bottom: 25px !important;
+  letter-spacing: 1px !important;
+}
+
+/* Сітка розділів футера на 3 колонки */
+.footer-grid {
+  display: flex !important;
+  justify-content: space-between !important;
+  text-align: left !important;
+  margin-bottom: 35px !important;
+  gap: 20px !important;
+}
+
+.footer-col {
+  flex: 1 !important;
+}
+
+.footer-col h4 {
+  color: white !important;
+  font-size: 15px !important;
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+  font-weight: 600 !important;
+  border-bottom: 2px solid #4CAF50 !important;
+  padding-bottom: 5px !important;
+  display: inline-block !important;
+}
+
+/* Посилання у футері */
+.footer-col a {
+  display: block !important;
+  color: #adbac7 !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  margin-bottom: 8px !important;
+  transition: color 0.2s ease !important;
+}
+
+.footer-col a:hover {
+  color: #4CAF50 !important;
+}
+
+.footer-col p {
+  margin: 0 0 8px 0 !important;
+  font-size: 14px !important;
+  color: #adbac7 !important;
+}
+
+/* Копірайт внизу */
+.footer-copyright {
+  font-size: 12px !important;
+  color: #768390 !important;
+  border-top: 1px solid #373e47 !important;
+  padding-top: 20px !important;
+  text-align: center !important;
+}
+
+/* Кнопка плавного підйому Наверх */
+.scroll-to-top {
+  position: absolute !important;
+  top: -25px !important;
+  right: 40px !important;
+  width: 50px !important;
+  height: 50px !important;
+  background-color: #4CAF50 !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 50px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 24px !important;
+  font-weight: bold !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+  transition: background-color 0.3s ease, transform 0.2s ease !important;
+}
+
+.scroll-to-top:hover {
+  background-color: #45a049 !important;
+  transform: scale(1.1) !important;
+}
+  </style>
+</head>
+<body>
+
+  <div class="glob">
+    <div class="container">
+    
+      <ul class="menu">
+              <li><a href="kabinet.html">особ. кабінет</a></li>
+              <li><a href="index.html">про нас</a></li>
+              <li><a href="gol.html">головна</a></li>
+              <li><a href="https://t.me/TDIHLP" target="_blank">допомога</a></li>
+            </ul>
+          </div>
+      
+      <div style="clear: both;"></div>
+
+      <!-- Контент кабінету -->
+      <div class="cabinet-box">
+        <h2>oсобистий кабінет</h2>
+        
+        <div class="info-group">
+          <label>Ім'я (Логін):</label>
+          <div id="user-login" class="info-value">Завантаження...</div>
+        </div>
+
+        <div class="info-group">
+          <label>Ваш пароль:</label>
+          <div class="password-wrapper">
+            <!-- Поле, де відображається пароль у вигляді крапок або тексту -->
+            <input type="password" id="user-password" class="info-value" style="flex-grow: 1; border: 1px solid #ccc;" readonly>
+            <button type="button" id="toggle-password-btn" class="btn-toggle">Показати</button>
+          </div>
+        </div>
+
+        <button class="btn-logout" onclick="logoutUser()">Вийти з акаунту</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Футер (як у вашому CSS) -->
+  <!-- НАШ НАДІЙНИЙ ТА КРАСИВИЙ ФУТЕР (ЧИСТИЙ ВАРІАНТ БЕЗ КНОПОК) -->
+<footer>
+  <a href="#" class="scroll-to-top" title="Наверх">↑</a>
+
+  <div class="footer-container">
+    <div class="footer-logo">GreenAgro</div>
+
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Навігація</h4>
+        <a href="gol.html">Головна</a>
+        <a href="index.html">Про нас</a>
+        <a href="kabinet.html">Особистий кабінет</a>
+        <a href="https://t.me/TDIHLP">Допомога</a>
+      </div>
+      <div class="footer-col">
+        <h4>Контакти</h4>
+        <p>📞 +380 (97) 378 84 59</p>
+        <p>📞 +380 (97) 598 88 35</p>
+        <p>✉️ support@greenagro.ua</p>
+      </div>
+      <div class="footer-col">
+        <h4>Графік роботи</h4>
+        <p>Пн - Пт: 08:00 - 20:00</p>
+        <p>Сб - Нд: 09:00 - 18:00</p>
+        <p>Доставка: Цілодобово</p>
+      </div>
+    </div>
+    
+    <div class="footer-copyright">
+      &copy; 2026 GreenAgro. Всі права захищені. Створено з турботою про українську землю.
+    </div>
+  </div>
+</footer>
+
+  <script>
+    // 1. Перевіряємо, чи користувач взагалі залогінився
+    const currentUser = localStorage.getItem('currentUser');
+    
+    if (!currentUser) {
+      // Якщо ніхто не зайшов — виганяємо на сторінку логіну (auth.html або як вона у вас названа)
+      alert("Будь ласка, спочатку увійдіть у систему!");
+      window.location.href = "auth.html"; 
+    } else {
+      // Якщо зайшов — витягуємо його ім'я
+      document.getElementById('user-login').innerText = currentUser;
+      
+      // Шукаємо пароль цього користувача в базі "siteUsers"
+      const users = JSON.parse(localStorage.getItem('siteUsers')) || {};
+      const userPassword = users[currentUser] || "••••••";
+      
+      document.getElementById('user-password').value = userPassword;
+    }
+
+    // 2. Логіка показу / приховування пароля при натисканні на кнопку
+    const passwordInput = document.getElementById('user-password');
+    const toggleBtn = document.getElementById('toggle-password-btn');
+
+    toggleBtn.addEventListener('click', function() {
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleBtn.innerText = 'Приховати';
+      } else {
+        passwordInput.type = 'password';
+        toggleBtn.innerText = 'Показати';
+      }
+    });
+
+    // 3. Функція виходу з акаунту
+    function logoutUser() {
+      localStorage.removeItem('currentUser'); // Видаляємо маркер поточної сесії
+      window.location.href = "auth.html"; // Перенаправляємо на вхід
+    }
+  </script>
+</body>
+</html>

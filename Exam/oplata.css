@@ -1,0 +1,130 @@
+html {
+  scroll-behavior: smooth;
+}
+html, body{
+    width: 750px;
+    height: 100%;
+    margin: 0;
+    margin-left: 125px;
+    background: url(281.jpg);
+    font-size: 16px;
+    background-attachment:fixed;
+}
+.clearfix:aftre{
+    content: "";
+    display: table;
+    clear: both;
+}
+:selection {
+  background: rgba(83, 95, 108, 0.3); 
+  color: #000;
+}
+.glob {
+    width: 770px;
+    background: rgb(219, 214, 254);
+    text-align: center;
+    border: 2px solid black;
+}
+.container{
+    padding: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+}
+
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+    margin-left: 340px;
+    float: right;
+}
+.menu>li{
+    float: left;
+    margin: 10px;
+}
+.clearfix::aftre{
+    content: "";
+    display: table;
+    clear: both;
+}
+.menu a{
+    text-decoration: none;
+}
+.menu>li{
+    display: inline-block;
+    font-size: 1rem;
+}
+.menu li a{
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    color: grey;
+}
+.menu>li:hover>a{
+    background: rgba(210, 210, 210, 1.0);
+    border-radius: 8px;
+    padding: 4px 10px;
+    color: black;
+}
+.menu li a:active {
+  transform: scale(0.95);
+  display: inline-block;
+}
+.payment-card {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+.warning-text {
+    color: #b71c1c;
+    background-color: #ffebee;
+    padding: 10px;
+    border-left: 5px solid #ef5350;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+.form-row .form-group {
+    width: 48%;
+}
+.form-row .form-group input {
+    width: 90%;
+}
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.submit-btn:hover {
+    background-color: #45a049;
+}

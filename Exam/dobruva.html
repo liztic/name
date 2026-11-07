@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Насіння та добрива | GreenAgro</title>
+    <style>
+        /* ПОВНЕ КОПІЮВАННЯ СТИЛІВ З ТВОЄЇ ГОЛОВНОЇ СТОРІНКИ */
+        html {
+            scroll-behavior: smooth;
+        }
+        html, body{
+            width: 750px;
+            height: 100%;
+            margin: 0;
+            margin-left: 125px;
+            background: url(281.jpg);
+            font-size: 16px;
+            background-attachment:fixed;
+        }
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        :selection {
+            background: rgba(83, 95, 108, 0.3); 
+            color: #000;
+        }
+        .glob{
+            width: 770px;
+            background: rgb(219, 214, 254);
+            text-align: center;
+            border: 2px solid black;
+            box-sizing: border-box;
+            padding-bottom: 20px;
+        }
+        .container{
+            padding: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .menu{
+            list-style: none;
+            padding: 0;
+            margin: 0; 
+            margin-left: 180px;
+            float: right;
+        }
+        .menu>li{
+            float: left;
+            margin: 10px;
+            display: inline-block;
+            font-size: 1rem;
+        }
+        .menu a{
+            text-decoration: none;
+        }
+        .menu li a{
+            transition-timing-function: ease-in-out;
+            transition-duration: 0.3s;
+            color: grey;
+        }
+        .menu>li:hover>a{
+            background: rgba(210, 210, 210, 1.0);
+            border-radius: 8px;
+            padding: 4px 10px;
+            color: black;
+        }
+        .menu li a:active {
+            transform: scale(0.95);
+            display: inline-block;
+        }
+        .photo{
+            height: 55px;
+            width: 55px;
+        }
+
+        /* ДОДАТКОВІ СТИЛІ СІТКИ ДЛЯ СТОРІНКИ КАТАЛОГУ */
+        .catalog-title {
+            text-align: center; color: black; font-weight: bold; font-size: 23px;
+            margin-top: 30px; margin-bottom: 20px; border-bottom: 2px dashed rgb(0, 4, 79); padding-bottom: 10px;
+        }
+        .catalog-layout { display: flex; gap: 15px; padding: 0 15px; }
+        
+        .filter-sidebar {
+            width: 200px; background: white; border: 2px solid rgb(0, 4, 79);
+            border-radius: 6px; padding: 15px; box-sizing: border-box; text-align: left; height: fit-content;
+        }
+        .filter-sidebar h3 { margin-top: 15px; font-size: 14px; color: rgb(0, 4, 79); border-bottom: 1px solid #ccc; padding-bottom: 5px; font-weight: bold; }
+        .filter-sidebar h3:first-child { margin-top: 0; }
+        .filter-group label { display: block; font-size: 12px; margin-bottom: 8px; cursor: pointer; color: black; }
+        .filter-group input { margin-right: 6px; vertical-align: middle; }
+
+        .products-content { flex: 1; }
+        .product-card {
+            background: white; border: 2px solid rgb(0, 4, 79); border-radius: 6px;
+            padding: 10px; margin-bottom: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: 0.2s;
+        }
+        .product-card:hover { transform: scale(1.01); }
+        .product-img {
+            width: 120px; height: 90px; border-radius: 4px; float: left;
+            border: 1px solid #ccc; background: #eef2f5; display: flex;
+            align-items: center; justify-content: center; font-size: 11px; color: #555; font-weight: bold;
+            text-align: center; padding: 5px; box-sizing: border-box;
+        }
+        .product-info { margin-left: 135px; text-align: left; }
+        .product-name { font-size: 15px; font-weight: bold; color: black; margin: 0 0 4px 0; }
+        .product-desc { font-size: 12px; color: #333; margin: 0 0 8px 0; line-height: 1.4; }
+        .product-meta { font-size: 11px; color: #666; margin-bottom: 5px; font-style: italic; }
+        .product-price { font-size: 14px; font-weight: bold; color: #4CAF50; }
+
+        footer {
+            width: 100%; background-color: #222831; color: #adbac7; margin-top: 40px;
+            padding: 30px 20px 20px 20px; box-sizing: border-box; border-radius: 0 0 6px 6px;
+        }
+        .footer-pay-btn {
+            display: inline-block; background-color: #4CAF50; color: white; padding: 8px 25px;
+            border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 14px; box-shadow: 0 4px 10px rgba(76, 175, 80, 0.2);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="glob">
+        <!-- ОРИГІНАЛЬНЕ МЕНЮ ДЛЯ ПЕРЕХОДУ НА СТОРІНКУ ЗАПЧАСТИН -->
+        <div class="clearfix" style="padding: 10px 15px; text-align: left;">
+            <div class="photo" style="background: #4CAF50; border-radius: 50%; float:left;"></div> 
+            <ul class="menu">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="about.html">Про нас</a></li>
+                <li><a href="catalog-parts.html">Запчастини</a></li>
+                <li><a href="cabinet.html">Кабінет</a></li>
+                <li><a href="payment.html">Оплата</a></li>
+            </ul>
+        </div>
+        <div class="catalog-title">🌱 Насіння та добрива</div>
+        <div class="catalog-layout">
+            <!-- БІЧНИЙ ФІЛЬТР ДЛЯ НАСІННЯ ТА ДОБРИВ -->
+            <div class="filter-sidebar">
+                <h3>Тип товару</h3>
+                <div class="filter-group">
+                    <label><input type="checkbox" class="filter-type" value="seeds" checked> Насіння</label>
+                    <label><input type="checkbox" class="filter-type" value="fertilizer" checked> Добрива</label>
+                </div>
+                <h3>Культура</h3>
+                <div class="filter-group">
+                    <label><input type="checkbox" class="filter-crop" value="veggie" checked> Овочеві</label>
+                    <label><input type="checkbox" class="filter-crop" value="grain" checked> Зернові / Бобові</label>
+                </div>
+                <h3>Фасування</h3>
+                <div class="filter-group">
+                    <label><input type="checkbox" class="filter-pack" value="bag" checked> Мішки (опт)</label>
+                    <label><input type="checkbox" class="filter-pack" value="pack" checked> Роздрібні пакети</label>
+                </div>
+            </div>
+
+            <!-- СПИСОК ТОВАРІВ (8 ВЕЛИКИХ ПОЗИЦІЙ) -->
+            <div class="products-content">
+                <div class="product-card clearfix" data-type="seeds" data-crop="veggie" data-pack="pack">
+                    <div class="product-img">Томати Органік</div>
+                    <div class="product-info">
+                        <div class="product-name">Насіння томатів «Органік Черрі»</div>
+                        <div class="product-meta">Тип: Насіння | Культура: Овочі</div>
+                        <div class="product-desc">Елітний сорт солодких томатів черрі. Ідеальна схожість, стійкість до фітофторозу та температурних вагань.</div>
+                        <div class="product-price">Ціна: 60 грн / уп.</div>
+                    </div>
+                </div>
+
+                <div class="product-card clearfix" data-type="fertilizer" data-crop="veggie" data-pack="pack">
+                    <div class="product-img">Біо-Добриво</div>
+                    <div class="product-info">
+                        <div class="product-name">Органічне добриво «Еко-Рост» 5л</div>
+                        <div class="product-meta">Тип: Добрива | Фасування: Каністра</div>
+                        <div class="product-desc">Концентрований біостимулятор росту на основі натурального гумусу. Покращує смак плодів та прискорює дозрівання.</div>
+                        <div class="product-price">Ціна: 2100 грн</div>
+                    </div>
+                </div>
+
+                <div class="product-card clearfix" data-type="seeds" data-crop="grain" data-pack="bag">
+                    <div class="product-img">Кукурудза</div>
+                    <div class="product-info">
+                        <div class="product-name">Посівна кукурудза «Дніпровський гібрид»</div>
+                        <div class="product-meta">Тип: Насіння | Культура: Зернові</div>
+                        <div class="product-desc">Висока стійкість до вилягання рослин та посухи. Швидка віддача вологи зерном під час дозрівання.</div>
+                        <div class="product-price">Ціна: 1800 грн / мішок</div>
+                    </div>
+                </div>
+
+                <div class="product-card clearfix" data-type="fertilizer" data-crop="grain" data-pack="bag">
+                    <div class="product-img">Ам. Селітра</div>
+                    <div class="product-info">
+                        <div class="product-name">Аміачна селітра Марка А (Азот 34.4%)</div>
+                        <div class="product-meta">Тип: Добрива | Фасування: Мішок 50кг</div>
+                        <div class="product-desc">Високоочищене гранульоване добриво для ранньовесняного підживлення озимих та ярих зернових культур.</div>
+                        <div class="product-price">Ціна: 950 грн / мішок</div>
+                    </div>
+                </div>
+
+                <div class="product-card clearfix" data-type="seeds" data-crop="veggie" data-pack="pack">
+                    <div class="product-img">Огірки Еко</div>
+                    <div class="product-info">
+                        <div class="product-name">Насіння огірків «Роднічок F1»</div>
+                        <div class="product-meta">Тип: Насіння | Культура: Овочі</div>
+                        <div class="product-desc">Бджолозапильний гібрид для відкритих ґрунтів та теплиць. Плоди без гіркоти, ідеальні для засолки.</div>
+                        <div class="product-price">Ціна: 45 грн / уп.</div>
+                    </div>
+                </div>
+
+                <div class="product-card clearfix" data-type="fertilizer" data-crop="veggie" data-pack="bag">
+                    <div class="product-img">Нітроамофоска</div>
+                    <div class="product-info">
+                        <div class="product-name">Комплексне добриво Нітроамофоска NPK</div>
+                        <div class="product-meta">Тип: Добрива | Фасування: Мішок 25кг</div>
+                        <div class="product-desc">Універсальне азотно-фосфорно-калійне добриво для основного внесення під картоплю, томати та буряк.</div>
+                        <div class="product-price">Ціна: 780 грн / мішок</div>
+                    </div>
+                </div>
+
+                <div class="product-card clearfix" data-type="seeds" data-crop="grain" data-pack="bag">
+                    <div class="product-img">Соя Посівна</div>
+                    <div class="product-info">
+                        <div class="product-name">Насіння сої сорту «Аполло» (Еліта)</div>
+                        <div class="product-meta">Тип: Насіння | Культура: Бобові</div>
+                        <div class="product-desc">Ранньостиглий сорт з високим вмістом протеїну. Стійкий до осипання зерна та посушливого клімату.</div>
+                        <div class="product-price">Ціна: 2400 грн / мішок</div>
+                    </div>
+                </div>
+
+                <div class="product-card clearfix" data-type="fertilizer" data-crop="grain" data-pack="pack">
+                    <div class="product-img">Хелат Бор</div>
+                    <div class="product-info">
+                        <div class="product-name">Мікродобриво Хелат Бору (Рідке концентроване)</div>
+                        <div class="product-meta">Тип: Добрива | Культура: Зернові/Олійні</div>
+                        <div class="product-desc">Призначене для позакореневого підживлення соняшнику, ріпаку та зернобобових для покращення цвітіння.</div>
+                        <div class="product-price">Ціна: 350 грн / л</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-action-block" style="text-align: center; margin-bottom: 15px;">
+                <a href="index.html" class="footer-pay-btn">← На головну</a>
+            </div>
+            <div style="font-size: 11px; color: #768390; border-top: 1px solid #373e47; padding-top: 10px;">
+                © 2026 GreenAgro. Розділ Насіння та Добрива. Курсовий проект.
+            </div>
+        </footer>
+    </div>
+</div>
+
+<script>
+const typeBoxes = document.querySelectorAll('.filter-type');
+const cropBoxes = document.querySelectorAll('.filter-crop');
+const packBoxes = document.querySelectorAll('.filter-pack');
+const cards = document.querySelectorAll('.product-card');
+
+function filterProducts() {
+    cards.forEach(card => {
+        const cardType = card.getAttribute('data-type');
+        const cardCrop = card.getAttribute('data-crop');
+        const cardPack = card.getAttribute('data-pack');
+
+        const typeChecked = document.querySelector(`.filter-type[value="${cardType}"]`).checked;
+        const cropChecked = document.querySelector(`.filter-crop[value="${cardCrop}"]`).checked;
+        const packChecked = document.querySelector(`.filter-pack[value="${cardPack}"]`).checked;
+
+        if (typeChecked && cropChecked && packChecked) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+[...typeBoxes, ...cropBoxes, ...packBoxes].forEach(box => {
+    box.addEventListener('change', filterProducts);
+});
+</script>
+</body>
+</html>
